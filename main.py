@@ -6,7 +6,7 @@ pygame.init()
 pygame.display.set_caption("Archimedes' Thrust Simulation by SorenDev")
 screen: pygame.Surface = pygame.display.set_mode((settings.APP_WIDTH, settings.APP_HEIGHT))
 
-object: CubeObject = CubeObject(20, pygame.Vector2(50, 400), pygame.Vector3(50, 50, 50), settings.WHITE)
+object: CubeObject = CubeObject(85, pygame.Vector2(600, 400), pygame.Vector3(10, 10, 10), settings.WHITE, 5)
 
 while True:
     settings.DELTA_TIME = pygame.time.Clock().tick(settings.FPS) / 1000.0

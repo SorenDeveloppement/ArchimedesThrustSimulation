@@ -3,14 +3,15 @@ import settings
 
 
 class Object:
-    def __init__(self, volumic_mass: float, pos: pygame.Vector2, volume_shape: pygame.Vector3, color: tuple[int]) -> None:
+    def __init__(self, volumic_mass: float, pos: pygame.Vector2, volume_shape: pygame.Vector3, color: tuple[int], scale: int = 1) -> None:
         self.__volumic_mass = volumic_mass # In kg•m-3
         self.__volume_shape = volume_shape # In metters
         self.__volume: float = (self.__volume_shape.x * self.__volume_shape.y * self.__volume_shape.z)
         self.__mass = self.__volumic_mass * self.__volume
         self.__poids = self.__mass * settings.GRAVITY
         self.__pos = pos
-        self.__color = color 
+        self.__color = color
+        self.__scale = scale 
         
     def draw(self, screen: pygame.Surface):
         pass
